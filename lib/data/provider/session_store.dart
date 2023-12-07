@@ -39,6 +39,14 @@ class SessionStore extends SessionUser {
           .showSnackBar(SnackBar(content: Text("${responseDTO.errorMessage}")));
     }
   }
+
+  Future<void> logout() async {
+    user = null;
+    this.accessToken = null;
+    this.refreshToken = null;
+    await secureStorage.delete(key: "accessToken");
+    await secureStorage.delete(key: "refreshToken");
+  }
 }
 
 // 3. 창고 데이터

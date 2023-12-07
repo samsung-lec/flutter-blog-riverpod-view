@@ -9,7 +9,7 @@ class Move {
   static String joinPage = "/join";
   static String postListPage = "/post/list";
   static String postWritePage = "/post/write";
-  static String userInfoPage = "/user/info";
+  //static String userInfoPage = "/user/info";
 }
 
 Map<String, Widget Function(BuildContext)> getRouters() {
